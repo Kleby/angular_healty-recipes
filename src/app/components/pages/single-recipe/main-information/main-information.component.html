@@ -1,0 +1,66 @@
+<div class="container__information">
+  <div class="information-content">
+    <div class="food-desc">
+      <h3 class="information-title">{{food.title}}</h3>
+      <p>
+        <strong class="desc-header">Tempo de preparo: </strong>{{food.readyInMinutes}}
+        minutos
+      </p>
+      <p>
+        <strong class="desc-header">Serve: </strong>{{food.servings}} pessoas
+      </p>
+      <p>
+        <strong class="desc-header">Preço padrão de venda: </strong>U${{food.pricePerServing}}
+      </p>
+      <p>
+        <strong class="desc-header">Vegetariano: </strong>
+        <span *ngIf="food.vegetarian=== true; else negativeResponse">Sim</span>
+      </p>
+      <p>
+        <strong class="desc-header">Vegano: </strong>
+        <span *ngIf="food.vegan === true; else negativeResponse">Sim</span>
+      </p>
+      <p>
+        <strong class="desc-header">Saudável: </strong>
+        <span *ngIf="food.veryHealthy === true; else negativeResponse">Sim</span>
+      </p>
+      <p>
+        <strong class="desc-header">Popular: </strong>
+        <span *ngIf="food.veryPopular === true; else negativeResponse">Sim</span>
+      </p>
+    </div>
+
+    <div class="imgDiv">
+      <img src={{food.image}} alt={{food.title}} class="foodImg"
+        *ngIf='food.image; else noImage'>
+    </div>
+    <p>
+      Gostou da receita?:
+      <span><a href={{food.sourceUrl}} target="_blank"><strong>Clique aqui</strong></a> e faça
+        ela de casa!</span>
+    </p>
+  </div>
+
+  <app-similar-recipes [recipeIdSimilar]="recipeIdSimilar" class="cards-recipe"></app-similar-recipes>
+
+  <div class="container__loader">
+    <div *ngIf="loading" class="loader" role="status">
+    </div>
+  </div>
+
+  <ng-template #negativeResponse>
+    Não
+  </ng-template>
+
+  <ng-template #noRecipe>
+    <p><strong>Sem receitas semelhantes no momento</strong></p>
+  </ng-template>
+
+  <ng-template #noImage>
+    <p>
+      <strong>
+        <u>Sem imagem no momento</u>
+      </strong>
+    </p>
+  </ng-template>
+</div>

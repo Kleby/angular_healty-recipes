@@ -1,0 +1,26 @@
+.container__similar-recepes .similar-recipe-title {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #035;
+}
+.container__similar-recepes .similar-recipe-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+}
+.container__similar-recepes .cardRecipe {
+  width: 350px;
+  cursor: pointer;
+  transition: 0.4s;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #035;
+  color: #dcf;
+}
+.container__similar-recepes .cardRecipe:hover {
+  background-color: #177d07;
+}/*# sourceMappingURL=similar-recipes.component.css.map */

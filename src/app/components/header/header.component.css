@@ -1,0 +1,113 @@
+.container__header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: center;
+  align-items: center;
+  background-color: #035;
+  font-family: "Pacifico", cursive;
+  width: 100%;
+}
+.container__header .header-banner {
+  max-width: 100%;
+  padding-bottom: 3px;
+}
+.container__header .header-banner a {
+  display: flex;
+  align-items: center;
+}
+.container__header .header-banner .banner-logo {
+  display: flex;
+  justify-content: center;
+}
+.container__header .header-banner .banner-logo img {
+  max-width: 76px;
+  min-width: 42px;
+  width: 100%;
+}
+.container__header .header-banner .banner-title {
+  width: 100%;
+  text-align: center;
+  color: #dcf;
+  letter-spacing: 1px;
+}
+.container__header .header-banner .banner-title:hover {
+  color: white;
+}
+.container__header a {
+  text-decoration: none;
+  color: #dcf;
+  padding: 12px;
+}
+.container__header a:hover {
+  color: white;
+}
+.container__header .header-banner,
+.container__header .header-menu {
+  max-width: 100%;
+}
+.container__header .header-menu .menu-btn {
+  display: none;
+  width: 50%;
+}
+.container__header .header-menu .btn-content {
+  background-color: #035;
+  color: #dcf;
+  display: block;
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.container__header .header-menu .menu-list {
+  list-style: none;
+  display: flex;
+}
+.container__header .header-menu li {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .container__header .menu-list {
+    padding: 0 13px;
+  }
+}
+@media screen and (max-width: 566px) {
+  .container__header .header-banner {
+    margin: 18px auto;
+    width: 100%;
+  }
+  .container__header .header-banner a {
+    display: flex;
+    flex-direction: column;
+  }
+  .container__header .header-menu {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  .container__header .header-menu .menu-btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .container__header .header-menu .menu-list {
+    display: none;
+    background-color: #035;
+  }
+  .container__header .header-menu .resposive {
+    display: flex;
+    flex-direction: column;
+  }
+  .container__header .header-menu .resposive li {
+    display: flex;
+    padding: 0;
+  }
+  .container__header .header-menu .resposive a {
+    padding: 12px;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .container__header .header-banner {
+    width: 100%;
+  }
+}/*# sourceMappingURL=header.component.css.map */

@@ -1,0 +1,151 @@
+@import 'src/assets/scss/variables.scss';
+
+.container__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $-bg-color;
+    font-family: 'Pacifico', cursive;
+    
+    width: 100%;
+    padding: 0px 12px;
+
+    .header-banner {
+        max-width: 100%;
+        padding-bottom: 3px;
+
+        a {
+            display: flex;
+            align-items: center;
+
+        }
+        .banner-logo {
+            display: flex;
+            justify-content: center;
+
+            img {
+                max-width: 76px;
+                min-width: 42px;
+                width: 100%;
+            }
+        }
+        .banner-title {
+            width: 100%;
+            text-align: center;
+            color: $-text-color;
+            letter-spacing: 1px;
+
+            &:hover {
+
+                color: lighten($color: $-text-color, $amount: 40);
+            }
+
+        }
+
+    }
+
+    a {
+        text-decoration: none;
+        color: $-text-color;
+        padding: 12px;
+
+
+        &:hover {
+            color: lighten($color: $-text-color, $amount: 40);
+        }
+    }
+
+    .header-banner,
+    .header-menu {
+        max-width: 100%;
+    }
+
+    .header-menu {
+        .menu-btn {
+            display: none;
+            width: 50%;
+        }
+
+        .btn-content {
+            background-color: $-bg-color;
+            color: $-text-color;
+            display: block;
+            font-size: 1.6rem;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .menu-list {
+            list-style: none;
+            display: flex;
+
+        }
+
+            li {
+                display: flex;
+            }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container__header{
+        .menu-list{
+            padding: 0 13px;
+        }
+    }
+}
+
+@media screen and (max-width: 566px) {
+
+    .container__header {
+        .header-banner {
+            margin: 18px auto;
+            width: 100%;
+
+            a {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .header-menu {
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+
+            .menu-btn{
+                display: flex;                
+                justify-content: flex-end;
+            }
+
+            .menu-list {
+                display: none;
+                background-color: #035;
+            }
+
+            .resposive {
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    display: flex;
+                    padding: 0;
+                }
+                a {
+                    padding: 12px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .container__header {
+        .header-banner {
+            width: 100%;
+        }
+    }
+}

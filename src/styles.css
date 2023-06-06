@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
+@import "node_modules/@fortawesome/fontawesome-free/css/all.css";
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ddf;
+  font-family: "Roboto Condensed", sans-serif;
+  width: 100%;
+}
+
+app-root, app-header, app-food-card {
+  display: block;
+}
+
+.container__search, .container__food {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  min-height: 75vh;
+}
+
+.container__btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.container__btn .btn-show-more {
+  background-color: #177d07;
+  color: #ddf;
+  padding: 9px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.container__btn .btn-show-more:hover {
+  background-color: #20ad0a;
+  color: white;
+  transition: 300ms;
+}
+
+.container__loader {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.container__loader .loader {
+  animation: is-rotating 1s infinite;
+  border: 6px solid #ddf;
+  border-radius: 50%;
+  border-top-color: #035;
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}/*# sourceMappingURL=styles.css.map */

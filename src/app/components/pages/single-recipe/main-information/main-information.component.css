@@ -1,0 +1,52 @@
+.container__information {
+  display: flex;
+  flex-direction: column;
+}
+.container__information .information-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  color: #035;
+}
+.container__information .information-content .information-title {
+  border-bottom: 1px solid #035;
+  margin-bottom: 10px;
+}
+.container__information .information-content .food-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+.container__information .information-content a {
+  text-decoration: none;
+  color: #035;
+  transition: 0.4s;
+}
+.container__information .information-content a:hover {
+  color: #177d07;
+}
+.container__information .imgDiv {
+  width: 50%;
+  margin-bottom: 10px;
+}
+.container__information .foodImg {
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid #035;
+}
+@media (max-width: 570px) {
+  .container__information .mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container__information .information-content {
+    width: 100%;
+  }
+  .container__information .imgDiv {
+    width: 100%;
+  }
+}/*# sourceMappingURL=main-information.component.css.map */

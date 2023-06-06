@@ -1,0 +1,20 @@
+.container__about {
+  padding: 22px;
+}
+.container__about .about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  border-bottom: 4px solid #035;
+  color: #035;
+}
+.container__about .about-content p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.container__about .about-content:last-child {
+  border-bottom: none;
+  margin: none;
+}/*# sourceMappingURL=about.component.css.map */

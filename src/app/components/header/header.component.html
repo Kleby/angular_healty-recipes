@@ -1,0 +1,43 @@
+<header class="container__header">
+    <div class="header-banner">
+        <a routerLink="/">
+            <div class="banner-title">
+                <h2>
+                    Healty Life
+                </h2>
+            </div>
+            <div class="banner-logo">
+                <img src="assets/images/favicon-logo.png"
+                    alt="Healty recipes logo" />
+            </div>
+        </a>
+    </div>
+    <nav class="header-menu" >
+        <div class="menu-btn">
+            <button 
+            class="btn-content" 
+            (click)="addResposive()" 
+            [ngStyle]="!toggle ? {'width': '100%'} : null" >
+            <i 
+            class="fa-solid fa-bars" 
+            *ngIf="!toggle; else menuClose"
+            ></i>
+            <ng-template #menuClose>
+                <i class="fa-solid fa-x" ></i>
+            </ng-template>
+        </button>
+    </div>
+        <ul class="menu-list" [ngClass]="toggle ? 'resposive': null">
+            <li>
+                <a routerLink="/">Home</a>
+            </li>
+            <li>
+                <a routerLink="/about">Sobre</a>
+            </li>
+            <li>
+                <a routerLink="/search">Pesquisar</a>
+            </li>
+        </ul>
+    </nav>
+
+</header>

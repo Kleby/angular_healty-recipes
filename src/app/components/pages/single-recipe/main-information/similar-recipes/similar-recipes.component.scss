@@ -1,0 +1,35 @@
+@import 'src/assets/scss/variables';
+
+.container__similar-recepes{ 
+  .similar-recipe-title{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 12px;
+    color: $-bg-color;
+  }
+  
+  .similar-recipe-content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .cardRecipe {
+    width: 350px;
+    cursor: pointer;
+    transition: 0.4s;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: $-bg-color;
+    color: $-text-color;
+
+    &:hover {
+      background-color: $-btn-color;
+    }
+
+    
+  }
+}

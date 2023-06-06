@@ -1,0 +1,25 @@
+.food-card {
+  width: 320px;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.food-card:hover {
+  border-color: #ff0044;
+}
+
+.image-card {
+  width: 100%;
+}
+
+.food-information {
+  padding: 14px 20px;
+}
+
+.loader {
+  border: 6px solid #e5e5e5;
+  border-top-color: #51d4db;
+  height: 50px;
+  width: 50px;
+}/*# sourceMappingURL=food-card.component.css.map */

@@ -1,0 +1,90 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixin';
+
+.container__search {
+  // display: flex;
+  // flex-direction: column;
+  // margin-bottom: 16px;
+  
+  .search-field {
+    display: flex;
+    margin: 16px auto;
+    max-width: 300px;
+  }
+
+  .field-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 92%;
+    margin: 0 auto;
+  }
+
+  input {
+    width: 90%;
+    padding: 10px;
+    padding-right: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid gray;
+    outline: none;
+  }
+
+  button {
+    width: 15%;
+    position: absolute;
+    right: -2px;
+    top: 0;
+    bottom: 0;
+    
+    padding: 10px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    
+    background-color: $-bg-color;
+    color: $-text-color;
+    
+    cursor: pointer;
+
+    &:hover{
+      @include formatHoverBtn($-bg-color, $-text-color)
+    }
+  }
+
+  .search-food-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    max-width: 100%;
+    padding: 0 22px;
+    gap: 16px;
+  }
+
+  .food-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+    background-color: $-bg-color;
+    color: $-text-color;
+
+    max-width: 400px;
+    width: 100%;
+    padding: 22px;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    .food-picture {
+      max-width: 92%;
+      width: 100%;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}

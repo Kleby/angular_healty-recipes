@@ -1,0 +1,44 @@
+ <div class="container__food">
+    <div class="food-content">
+        <div routerLink="/recipe" [queryParams]="{id: food.id}"
+            *ngFor="let food of foods" class="food-card">
+            <div class="card-image-food">
+                <img src={{food.image}} alt={{food.title}} class="image-card"
+                    *ngIf="food.image; else noImage">
+            </div>
+            <div class="food-information">
+                <p><strong>Nome:</strong> {{food.title}}</p>
+                <p><strong>Tempo de preparo:</strong> {{food.readyInMinutes}}
+                    minutos</p>
+                <p>
+                    <strong>Vegetariano: </strong>
+                    <span *ngIf="food.vegetarian === true; else negativeRes">Sim</span>
+                </p>
+                <p>
+                    <strong>Vegano: </strong>
+                    <span *ngIf="food.vegetarian === true; else negativeRes">Sim</span>
+                </p>
+            </div>
+        </div>
+        <ng-template #noImage>
+            <p><strong><u>Sem imagem no momento</u></strong></p>
+        </ng-template>
+
+        <ng-template #negativeRes>
+            <span>Não</span>
+        </ng-template>
+    </div>
+
+    <div class="container__loader">
+        <div *ngIf="loading" class="loader"></div>
+        
+        <div *ngIf="loadingMore" class="loader"></div>
+    </div>
+
+    <div class="container__btn">
+        <button (click)="loadMore()"
+            type="button"
+            class="btn-show-more">Carregar mais</button>
+
+    </div>
+</div>

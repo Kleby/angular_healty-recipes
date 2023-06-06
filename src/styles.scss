@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+@import "node_modules/@fortawesome/fontawesome-free/css/all.css";
+
+@import "assets/scss/variables";
+@import "assets/scss/mixin";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: $-text-color;
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 100%;
+}
+
+app-root, app-header, app-food-card{
+    display: block;
+}
+
+.container__search, .container__food{
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+    min-height: 75vh;
+
+}
+
+.container__btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+
+    .btn-show-more {
+        background-color: $-btn-color;
+        color: $-text-color;
+        padding: 9px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:hover{
+            @include formatHoverBtn($-btn-color, $-text-color)
+        }
+    }
+}
+
+
+.container__loader{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+    .loader {
+            animation: is-rotating 1s infinite;
+            border: 6px solid $-text-color;
+            border-radius: 50%;
+            border-top-color: $-bg-color;
+            height: 70px;
+            width: 70px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    
+        @keyframes is-rotating {
+            to {
+                transform: rotate(1turn);
+            }
+        }
+}

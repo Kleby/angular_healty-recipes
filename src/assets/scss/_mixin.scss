@@ -1,0 +1,7 @@
+@import './variables';
+
+@mixin formatHoverBtn($-bg-color-hover, $-text-color-hover: $-text-color){
+    background-color: lighten($color: $-bg-color-hover, $amount: 10);
+    color: lighten($color: $-text-color-hover, $amount: 10);
+    transition: 300ms;
+}

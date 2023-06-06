@@ -1,0 +1,72 @@
+@import '/src/assets/scss/variables';
+@import '/src/assets/scss/mixin';
+
+.container__food {
+    // display: flex;
+    // flex-direction: column;
+    // padding: 16px 0;
+    // min-height: 72vh;
+    // background-color: $-text-color;
+    
+
+    .food-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .food-card {
+        max-width: 300px;
+        min-height: 200px;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+
+
+        color: $-text-color;
+        background-color: $-bg-color;
+
+        gap: 10px;
+        padding: 10px 12px;
+        border-radius: 8px;
+
+        transition: 0.4s;
+        cursor: pointer;
+
+        &:hover {
+            @include formatHoverBtn($-btn-color)
+        }
+
+        .card-image-food {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-card {
+            width: 100%;
+            border-radius: 8px;
+
+        }
+    }
+
+    .food-information {
+        margin: 10px 0;
+    }
+}
+
+
+@media screen and (max-width: 565px) {
+    .food-content {
+        justify-items: center;
+
+        .food-card {
+            max-width: 90%;
+        }
+    }
+}
