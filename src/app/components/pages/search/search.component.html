@@ -3,7 +3,7 @@
     <div class="field-content">
       <input type="text"
       name="search"
-      placeholder="Pesquise por suas receitas"
+      placeholder="Pesquisar receitas"
       [(ngModel)]="query"
       (keydown.enter)="getSearch()" />
       <button (click)="getSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -11,14 +11,14 @@
   </div>
 
   <div class="search-food-cards">
-    <div routerLink="/recipe" [queryParams]="{id: food.id}" class="food-card"
+    <div routerLink="/recipe" [queryParams]="{id: food.id}" class="result-food-card"
       *ngFor="let food of foods">
       <div class="food-picture">
         <img *ngIf="food.image; else noImage" src={{food.image}}
           alt={{food.title}}
         />
       </div>
-      <p class="text-center p-4">
+      <p class="food-title">
         <strong>
           {{food.title}}
         </strong>

@@ -1,12 +1,6 @@
-.container__search {
-  display: flex;
-  flex-direction: column;
-  min-height: 90vh;
-}
 .container__search .search-field {
   display: flex;
   margin: 16px auto;
-  padding-bottom: 22px;
   max-width: 300px;
 }
 .container__search .field-content {
@@ -35,5 +29,48 @@
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   background-color: #035;
-  color: #dcf;
+  color: #ddf;
+  cursor: pointer;
+}
+.container__search button:hover {
+  background-color: #005288;
+  color: white;
+  transition: 300ms;
+}
+.container__search .search-food-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  padding: 0 22px;
+  gap: 16px;
+}
+.container__search .result-food-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #035;
+  color: #ddf;
+  max-width: 370px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.container__search .result-food-card:hover {
+  background-color: #005288;
+  color: white;
+  transition: 300ms;
+}
+.container__search .result-food-card .food-picture {
+  max-width: 92%;
+  width: 100%;
+}
+.container__search .result-food-card .food-picture img {
+  width: 100%;
+  border-radius: 10px;
+}
+.container__search .result-food-card .food-title {
+  padding-top: 10px;
 }/*# sourceMappingURL=search.component.css.map */

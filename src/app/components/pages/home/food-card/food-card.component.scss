@@ -1,5 +1,5 @@
-@import '/src/assets/scss/variables';
-@import '/src/assets/scss/mixin';
+@import '../../../../../assets/scss/variables';
+@import '../../../../../assets/scss/mixin';
 
 .container__food {
     // display: flex;
@@ -17,7 +17,7 @@
     }
 
     .food-card {
-        max-width: 300px;
+        max-width: 370px;
         min-height: 200px;
         width: 100%;
 
@@ -37,7 +37,7 @@
         cursor: pointer;
 
         &:hover {
-            @include formatHoverBtn($-btn-color)
+            @include formatHoverBtn($-bg-color)
         }
 
         .card-image-food {

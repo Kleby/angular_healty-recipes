@@ -19,8 +19,10 @@
   margin: 10px;
   border-radius: 8px;
   background-color: #035;
-  color: #dcf;
+  color: #ddf;
 }
 .container__similar-recepes .cardRecipe:hover {
-  background-color: #177d07;
+  background-color: #005288;
+  color: white;
+  transition: 300ms;
 }/*# sourceMappingURL=similar-recipes.component.css.map */

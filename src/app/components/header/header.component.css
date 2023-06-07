@@ -1,11 +1,11 @@
 .container__header {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  justify-items: center;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: #035;
   font-family: "Pacifico", cursive;
   width: 100%;
+  padding: 0px 12px;
 }
 .container__header .header-banner {
   max-width: 100%;
@@ -27,7 +27,7 @@
 .container__header .header-banner .banner-title {
   width: 100%;
   text-align: center;
-  color: #dcf;
+  color: #ddf;
   letter-spacing: 1px;
 }
 .container__header .header-banner .banner-title:hover {
@@ -35,7 +35,7 @@
 }
 .container__header a {
   text-decoration: none;
-  color: #dcf;
+  color: #ddf;
   padding: 12px;
 }
 .container__header a:hover {
@@ -51,7 +51,7 @@
 }
 .container__header .header-menu .btn-content {
   background-color: #035;
-  color: #dcf;
+  color: #ddf;
   display: block;
   font-size: 1.6rem;
   cursor: pointer;

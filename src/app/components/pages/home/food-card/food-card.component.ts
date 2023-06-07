@@ -30,7 +30,7 @@ export class FoodCardComponent implements OnInit {
 
   loadMore() {
     this.loadingMore = true;
-    this.healtFoodService.listFood(3)
+    this.healtFoodService.listFood(4)
       .pipe(finalize(() => this.loadingMore = false))
       .subscribe((data: any) => 
       this.foods = this.foods.concat(data.recipes)

@@ -1,25 +1,49 @@
-.food-card {
-  width: 320px;
-  border: 1px solid white;
-  cursor: pointer;
-  transition: 0.4s;
+.container__food .food-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
-
-.food-card:hover {
-  border-color: #ff0044;
-}
-
-.image-card {
+.container__food .food-card {
+  max-width: 370px;
+  min-height: 200px;
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  color: #ddf;
+  background-color: #035;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.container__food .food-card:hover {
+  background-color: #005288;
+  color: white;
+  transition: 300ms;
+}
+.container__food .food-card .card-image-food {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.container__food .food-card .image-card {
+  width: 100%;
+  border-radius: 8px;
+}
+.container__food .food-information {
+  margin: 10px 0;
 }
 
-.food-information {
-  padding: 14px 20px;
-}
-
-.loader {
-  border: 6px solid #e5e5e5;
-  border-top-color: #51d4db;
-  height: 50px;
-  width: 50px;
+@media screen and (max-width: 565px) {
+  .food-content {
+    justify-items: center;
+  }
+  .food-content .food-card {
+    max-width: 90%;
+  }
 }/*# sourceMappingURL=food-card.component.css.map */
